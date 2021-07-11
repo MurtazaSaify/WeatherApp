@@ -15,6 +15,8 @@
 		F9D85EE0269AD25E007B36C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D85EDE269AD25E007B36C1 /* LaunchScreen.storyboard */; };
 		F9D85EEB269AD25E007B36C1 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D85EEA269AD25E007B36C1 /* WeatherAppTests.swift */; };
 		F9D85EF6269AD25E007B36C1 /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D85EF5269AD25E007B36C1 /* WeatherAppUITests.swift */; };
+		F9D85F0E269ADA0B007B36C1 /* ServiceContractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D85F0D269ADA0B007B36C1 /* ServiceContractor.swift */; };
+		F9D85F13269ADACB007B36C1 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D85F12269ADACB007B36C1 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F9D85EF1269AD25E007B36C1 /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D85EF5269AD25E007B36C1 /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		F9D85EF7269AD25E007B36C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D85F0D269ADA0B007B36C1 /* ServiceContractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContractor.swift; sourceTree = "<group>"; };
+		F9D85F12269ADACB007B36C1 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 		F9D85F08269AD295007B36C1 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				F9D85F0D269ADA0B007B36C1 /* ServiceContractor.swift */,
+				F9D85F12269ADACB007B36C1 /* Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 			files = (
 				F9D85ED8269AD25C007B36C1 /* ViewController.swift in Sources */,
 				F9D85ED4269AD25C007B36C1 /* AppDelegate.swift in Sources */,
+				F9D85F13269ADACB007B36C1 /* Service.swift in Sources */,
+				F9D85F0E269ADA0B007B36C1 /* ServiceContractor.swift in Sources */,
 				F9D85ED6269AD25C007B36C1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
