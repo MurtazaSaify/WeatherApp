@@ -11,7 +11,7 @@ class Service: ServiceContractor {
 
     private var urlSession: URLSession
 
-    init(urlSession: URLSession) {
+    init(urlSession: URLSession = .shared) {
         self.urlSession = urlSession
     }
     
