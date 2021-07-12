@@ -1,0 +1,75 @@
+
+{
+    "location": {
+        "name": "London",
+        "region": "City of London, Greater London",
+        "country": "United Kingdom",
+        "lat": 51.52,
+        "lon": -0.11,
+        "tz_id": "Europe/London",
+        "localtime_epoch": 1625999002,
+        "localtime": "2021-07-11 11:23"
+    },
+    "current": {
+        "last_updated_epoch": 1625994000,
+        "last_updated": "2021-07-11 10:00",
+        "temp_c": 19.0,
+        "temp_f": 66.2,
+        "is_day": 1,
+        "condition": {
+            "text": "Partly cloudy",
+            "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+            "code": 1003
+        },
+        "wind_mph": 0.0,
+        "wind_kph": 0.0,
+        "wind_degree": 165,
+        "wind_dir": "SSE",
+        "pressure_mb": 1016.0,
+        "pressure_in": 30.5,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 64,
+        "cloud": 75,
+        "feelslike_c": 19.0,
+        "feelslike_f": 66.2,
+        "vis_km": 10.0,
+        "vis_miles": 6.0,
+        "uv": 5.0,
+        "gust_mph": 4.3,
+        "gust_kph": 6.8
+    },
+    "forecast": {
+        "forecastday": [
+            {
+                "date": "2021-07-11",
+                "date_epoch": 1625961600,
+                "day": {
+                    "maxtemp_c": 21.0,
+                    "maxtemp_f": 69.8,
+                    "mintemp_c": 13.4,
+                    "mintemp_f": 56.1,
+                    "avgtemp_c": 17.4,
+                    "avgtemp_f": 63.3,
+                    "maxwind_mph": 8.5,
+                    "maxwind_kph": 13.7,
+                    "totalprecip_mm": 0.7,
+                    "totalprecip_in": 0.03,
+                    "avgvis_km": 9.0,
+                    "avgvis_miles": 5.0,
+                    "avghumidity": 76.0,
+                    "daily_will_it_rain": 1,
+                    "daily_chance_of_rain": "89",
+                    "daily_will_it_snow": 0,
+                    "daily_chance_of_snow": "0",
+                    "condition": {
+                        "text": "Patchy rain possible",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png",
+                        "code": 1063
+                    },
+                    "uv": 6.0
+                }
+            }
+        ]
+    }
+}
