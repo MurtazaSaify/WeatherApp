@@ -15,3 +15,13 @@ protocol ServiceContractor {
 
     func get<T: Codable>(request: RequestBuildable, completion: @escaping (Result<T, Error>) -> Void)
 }
+
+extension RequestBuildable {
+
+    func baseURLComponents() -> URLComponents {
+        var urlComponent = URLComponents()
+        urlComponent.scheme = Constants.ServiceConstants.baseURLScheme
+        urlComponent.host = Constants.ServiceConstants.baseURLHost
+        return urlComponent
+    }
+}

@@ -14,4 +14,6 @@ protocol WeatherListViewModelContractor {
     
     func loadWeatherListFor(city: String, unit: TemperatureUnit)
     func loadPreferredCities()
+    
+    func forecastDayObject(index: Int) -> ForecastDay?
 }

@@ -15,10 +15,10 @@ class WeatherListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
     @IBOutlet private weak var tempUnitSegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var segmentsConnectorView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBarController?.navigationItem.title = tabBarItem.title
         WeatherListStackBuilder.configureFor(viewController: self)
         bindViewModel()
         setupStyling()
@@ -49,12 +49,10 @@ class WeatherListViewController: UIViewController {
     }
 
     private func setupStyling() {
-        if let subview = view.viewWithTag(101) {
-            subview.layer.borderColor = UIColor.lightGray.cgColor
-            subview.layer.borderWidth = 1
-            subview.layer.cornerRadius = 10
-            view.sendSubviewToBack(subview)
-        }
+        segmentsConnectorView.layer.borderColor = UIColor.lightGray.cgColor
+        segmentsConnectorView.layer.borderWidth = 1
+        segmentsConnectorView.layer.cornerRadius = 10
+        view.sendSubviewToBack(segmentsConnectorView)
     }
 
     @IBAction private func onSelectSegmentAction() {
@@ -79,6 +77,19 @@ extension WeatherListViewController: UITableViewDataSource {
         }
         cell.apply(model: listDisplayModels[indexPath.row])
         return cell
+    }
+}
+
+extension WeatherListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        guard let data = viewModel?.forecastDayObject(index: indexPath.row) else {
+            return
+        }
+        let detailsVC = WeatherForecastDetailsStackBuilder.buildWith(forecastday: data,
+                                                                     temperatureUnit: selectedUnit())
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 }
 

@@ -1,25 +1,24 @@
 //
-//  ForecastListDisplayModel.swift
+//  ForecastDetailsDisplayModel.swift
 //  WeatherApp
 //
-//  Created by Murtuza Saify on 11/07/2021.
+//  Created by Murtuza Saify on 13/07/2021.
 //
 
 import Foundation
 
-struct ForecastListItemDisplayModel {
-
+struct ForecastDetailsDisplayModel {
     var maxTemperature: String?
     var minTemperature: String?
     var averageTemperature: String?
     var condition: String?
-    var date: String?
     var icon: URL?
 
+    var hourlyDisplayModels: [ForecastHourDisplayModel]
+
     init(forecastDay: ForecastDay,
-         unit: TemperatureUnit) {
-        
-        switch unit {
+         temperatureUnit: TemperatureUnit) {
+        switch temperatureUnit {
         case .celcius:
             if let maxTemp = forecastDay.forecast?.maxTempCelcius {
                 maxTemperature =  "Max: \(maxTemp) °C"
@@ -43,17 +42,11 @@ struct ForecastListItemDisplayModel {
         }
         
         condition = forecastDay.forecast?.summary?.description
-        
         if let iconUrl = forecastDay.forecast?.summary?.icon {
             icon = URLFormatter.urlByPrefixingHTTPSchemeFor(url: iconUrl)
         }
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        if let safeDateString = forecastDay.date,
-           let actualDate = dateFormatter.date(from: safeDateString) {
-            dateFormatter.dateStyle = .full
-            date = dateFormatter.string(from: actualDate)
-        }
+        
+        hourlyDisplayModels = forecastDay.hours?.compactMap { ForecastHourDisplayModel(forecastHour: $0,
+                                                                                       temperatureUnit: temperatureUnit) } ?? []
     }
 }
