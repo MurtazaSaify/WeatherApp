@@ -23,4 +23,5 @@ class FetchWeatherListUseCase: FetchWeatherListUseCaseContractor {
     func fetchWeatherList(city: String, completion: @escaping (([ForecastDay]?, Error?) -> ())) {
         repository.fetchWeatherList(city: city, completion: completion)
     }
+
 }

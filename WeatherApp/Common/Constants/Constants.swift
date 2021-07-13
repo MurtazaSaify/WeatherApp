@@ -11,5 +11,7 @@ struct Constants {
 
     struct ServiceConstants {
         static let apiKey = "e00b3b889cfb49dc9cd95226211107"
+        static let baseURLScheme = "http"
+        static let baseURLHost = "api.weatherapi.com"
     }
 }
